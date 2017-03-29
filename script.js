@@ -27,9 +27,36 @@ window.onclick = function(event) {
     }
 }
 
+var modal = document.getElementById('id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var modal = document.getElementById('id04');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var modal = document.getElementById('id05');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 function myFunction() {
     var x = document.getElementById('myDIV');
-    if (x.style.display === 'none') {
+    if (x.style.display == 'none') {
         x.style.display = 'block';
     } else {
         x.style.display = 'none';

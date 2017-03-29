@@ -1,47 +1,644 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
 <style>
-body {margin:0;}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
+  background-color: lightblue;
+  margin-top:20px;
 }
 </style>
+<title>Tesla Car</title>
+<style type="text/css">
+#search{
+  width: :200px;
+  padding: 7px;
+  border :1 px solid #607d8b;
+
+}
+#submit{
+  padding: 7px;
+  background :#607d8b;
+  border :1 px solid #607d8b;
+  color: white;
+  margin-left:-5px;
+  cursor: pointer;
+}
+#submit:hover{
+  background: #333;
+  transition: all 0.40s;
+}
+</style>
+<link rel="stylesheet" href="body.css">
+<link rel="stylesheet" href="signup.css">
+<link rel="stylesheet" href="login.css">
 </head>
-<body>
-  <img src="image/Tesla-Motors-logo.png" alt="Tesla" width="104" height="142">
+<body background="image/bg.jpg">
+  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+  <button onclick="myFunction()">Click Me</button>
+<div id="myDIV">
+  This is my DIV element.
+</div>
+<div id="myDIV2">
+  This is  not my DIV element.
+</div>
+  </div>
+</div>
+<style>
+img {
+    display: block;
+    margin: 0 auto;
+}
+</style>
+<img src="image/Tesla-Motors-logo.png" alt="Tesla" width="104" height="142" >
   <div class="topnav" id="myTopnav">
-    <a href="#home">Home</a>
-    <a href="#news">Model S</a>
-    <a href="#contact">Model X</a>
-    <a href="#about">Model 3</a>
-    <a href="#about">About</a>
-    <a href="#about">Sign up</a>
-    <a href="#about">Sign in</a>
+    <a href="#home" >Home</a>
+    <a href="#about" onclick="document.getElementById('id01').style.display='block'">Sign up</a>
+    <a href="#about" onclick="document.getElementById('id02').style.display='block'">Sign in</a>
+    <a href="#about" onclick="document.getElementById('id03').style.display='block'">About</a>
+    <a href="#model-s" onclick="document.getElementById('id04').style.display='block'">Model S</a>
+    <a href="#model-x" onclick="document.getElementById('id05').style.display='block'">Model X</a>
+    <a href="#model-3" onclick="document.getElementById('id06').style.display='block'">Model 3</a>
+    <a href="#stores" onclick="document.getElementById('id07').style.display='block'">Store</a>
+    <a href="#search" onclick="document.getElementById('id08').style.display='block'">Search</a>
   </div>
 
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div id="id02" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      <input type="checkbox" checked="checked"> Remember me
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+<div id="id03" class="modal">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container" >
+      <label>
+              <p>Tesla was founded in 2003 by a group of engineers in Silicon Valley who wanted to prove that electric cars could be better than gasoline-powered cars. With instant torque, incredible power, and zero emissions, Tesla’s products would be cars without compromise. Each new generation would be increasingly affordable, helping the company work towards its mission: to accelerate the world’s transition to sustainable energy. </p>
+              <p>Tesla’s engineers first designed a powertrain for a sports car built around an AC induction motor, patented in 1888 by Nikola Tesla, the inventor who inspired the company’s name. The resulting Tesla Roadster was launched in 2008. Accelerating from 0 to 60 mph in 3.7 seconds and achieving a range of 245 miles per charge of its lithium ion battery, the Roadster set a new standard for electric mobility. Tesla would sell more than 2,400 Roadsters, now on the road in more than 30 countries. </p>
+              <p>In 2012, Tesla launched Model S, the world’s first premium electric sedan. Built from the ground up to be 100 percent electric, Model S has redefined the very concept of a four-door car. With room for seven passengers and more than 64 cubic feet of storage, Model S provides the comfort and utility of a family sedan while achieving the acceleration of a sports car: 0 to 60 mph in about five seconds. Its flat battery pack is integrated into the chassis and sits below the occupant cabin, lending the car a low center of gravity that enables outstanding road holding and handling while driving 265 miles per charge. Model S was named Motor Trend’s 2013 Car of the Year and achieved a 5-star safety rating from the U.S. National Highway Traffic Safety Administration. </p>
+              <p>In late 2014, Tesla CEO Elon Musk unveiled two dual motor all-wheel drive configurations of Model S that further improve the vehicle’s handling and performance. The 85D features a high efficiency motor at the front and rear, giving the car unparalleled control of traction in all conditions. The P85D pairs a high efficiency front motor with a performance rear motor for supercar acceleration, achieving a 0 to 60 mph time of 3.2 seconds – the fastest four-door production car ever made. </p>
+              <p>Tesla owners enjoy the benefit of charging at home so they never have to visit a gas station or spend a cent on gasoline. For long distance journeys, Tesla’s Supercharger network provides convenient access to high speed charging, replenishing half a charge in as little as 20 minutes. Superchargers now connect popular routes in North America, Europe, and Asia Pacific. </p>
+              <p>Tesla’s vehicles are produced at its factory in Fremont, California, previously home to New United Motor Manufacturing Inc., a joint venture between Toyota and General Motors. The Tesla Factory has returned thousands of jobs to the area and is capable of producing 2,000 cars a week. </p>
+              <p>The company is expanding its manufacturing footprint into other areas, including in Tilburg, the Netherlands, where it has an assembly facility, and Lathrop, California, where it has a specialized production plant. To reduce the costs of lithium ion battery packs, Tesla and key strategic partners including Panasonic have begun construction of a gigafactory in Nevada that will facilitate the production of a mass-market affordable vehicle, Model 3. By 2018, the gigafactory will produce more lithium ion cells than all of the world’s combined output in 2013. The gigafactory will also produce battery packs intended for use in stationary storage, helping to improve robustness of the electrical grid, reduce energy costs for businesses and residences, and provide a backup supply of power. </p>
+              <p>Tesla is not just an automaker, but also a technology and design company with a focus on energy innovation. </p>
+            </label>
+          </div>
+        </form>
+        </div>
+        <div id="id04" class="modal">
+          <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <form class="modal-content animate" action="/action_page.php">
+              <label>
+        <section id="performance" class="section-container section-intro">
+    <div class="container">
+        <h1 class="section-title section-title--hed">Performance and safety refined</h1>
+
+        <p class="section-description section-description--dek">Model&nbsp;S is designed from the ground up to be the safest, most exhilarating sedan on the road. With unparalleled performance delivered through Tesla's unique, all-electric powertrain, Model&nbsp;S accelerates from 0 to 100 kph in as little as 2.7 seconds. Model&nbsp;S comes with Autopilot capabilities designed to make your highway driving not only safer, but stress&nbsp;free.</p>
+        <div class="section--features">
+            <div class="feature--adaptive-headlights">
+                <h4 class="section-sub-title">Adaptive Lighting</h4>
+                <p class="section-description">Model&nbsp;S now features full LED adaptive headlamps. Besides enhancing the already great styling, they also boost safety: 14 three-position LED dynamic turning lights improve visibility at night, especially on winding roads.</p>
+            </div>
+            <div class="feature--pollution-free">
+                <h4 class="section-sub-title">Bio-Weapon Defense Mode</h4>
+                <p class="section-description">Model&nnbsp;S now features a Medical grade HEPA air filtration system, which removes at least 99.97% of particulate exhaust pollution and effectively all allergens, bacteria and other contaminants from cabin air. The bioweapon defense mode creates positive pressure inside the cabin to protect occupants.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="engineering" class="section-container section-chassis">
+    <div class="container">
+        <h1 class="section-title section-title--hed">Electric All-Wheel Drive</h1>
+    </div>
+    <div class="section-chassis-explorer">
+        <div class="chassis-container">
+            <div id="dualmotor">
+                <div class="slick-slider-container gallery">
+                    <div class="motor-slide hidden" data-toggle="dual">
+                        <figure>
+
+            <picture class="media-element media-image">
+                 <source
+                     srcset="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-dual--touch.jpg?20170115, /tesla_theme/assets/img/models/chassis-explorer/chassis-motor-dual--touch@2x.jpg?20170115 2x"
+                     media="(max-width: 640px)">
+                 <source
+                     srcset="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-dual.jpg?20170115, /tesla_theme/assets/img/models/chassis-explorer/chassis-motor-dual@2x.jpg?20170115 2x"
+                     media="(min-width: 640px)">
+                 <img
+                     src="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-dual.jpg?20170115"
+                     srcset="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-dual.jpg?20170115, /tesla_theme/assets/img/models/chassis-explorer/chassis-motor-dual@2x.jpg?20170115 2x"
+                     alt="All-Wheel Drive Model S">
+             </picture>                            <figcaption class="media-caption hide-on-desk">All-Wheel Drive</figcaption>
+                        </figure>
+                        <div class="slide-caption">
+                            <div class="caption-container">
+                                <p class="motor-front">Front motor</p>
+                                <p class="motor-rear">Rear motor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="motor-slide hidden" data-toggle="p90d">
+                        <figure>
+
+            <picture class="media-element media-image">
+                 <source
+                     srcset="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-p90d--touch.jpg?20170115, /tesla_theme/assets/img/models/chassis-explorer/chassis-motor-p90d--touch@2x.jpg?20170115 2x"
+                     media="(max-width: 640px)">
+                 <source
+                     srcset="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-p90d.jpg?20170115, /tesla_theme/assets/img/models/chassis-explorer/chassis-motor-p90d@2x.jpg?20170115 2x"
+                     media="(min-width: 640px)">
+                 <img
+                     src="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-p90d.jpg?20170115"
+                     srcset="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-p90d.jpg?20170115, /tesla_theme/assets/img/models/chassis-explorer/chassis-motor-p90d@2x.jpg?20170115 2x"
+                     alt="P100D Model S">
+             </picture>                            <figcaption class="media-caption media-p85d-caption hide-on-desk">P100D</figcaption>
+                        </figure>
+                        <div class="slide-caption">
+                            <div class="caption-container">
+                                <p class="motor-front">Front motor</p>
+                                <p class="motor-rear">Rear high performance motor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="motor-slide hidden" data-toggle="single">
+                        <figure>
+
+            <picture class="media-element media-image">
+                 <source
+                     srcset="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-single--touch.jpg?20170115, /tesla_theme/assets/img/models/chassis-explorer/chassis-motor-single--touch@2x.jpg?20170115 2x"
+                     media="(max-width: 640px)">
+                 <source
+                     srcset="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-single.jpg?20170115, /tesla_theme/assets/img/models/chassis-explorer/chassis-motor-single@2x.jpg?20170115 2x"
+                     media="(min-width: 640px)">
+                 <img
+                     src="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-single.jpg?20170115"
+                     srcset="/tesla_theme/assets/img/models/chassis-explorer/chassis-motor-single.jpg?20170115, /tesla_theme/assets/img/models/chassis-explorer/chassis-motor-single@2x.jpg?20170115 2x"
+                     alt="Single Motor Model S">
+             </picture>                            <figcaption class="media-caption hide-on-desk">Single motor</figcaption>
+                        </figure>
+                        <div class="slide-caption">
+                            <div class="caption-container">
+                                <p class="motor-rear">Rear motor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="icon-arrow-left alternative hide-on-desk" data-slick-slide="previous">
+                        <em class="hidden">previous</em>
+                    </span>
+                    <span class="icon-arrow-right alternative hide-on-desk" data-slick-slide="next">
+                        <em class="hidden">next</em>
+                    </span>
+                </div>
+                <nav class="models-nav motortype-nav nav-pill">
+                    <ul class="nav-block" data-gtm-event="widget-interaction" data-gtm-widget="Electric AWD" data-gtm-type="click">
+                        <li class="nav-item"><span data-toggle="dual" data-slide="0" class="nav-link">Dual Motor</span></li>
+                        <li class="nav-item nav-selected nav-label-p90d battery-badge">
+                            <span data-toggle="p90d" data-slide="1" class="battery-badge--p100d nav-link">P100D</span>
+                        </li>
+                        <li class="nav-item"><span data-toggle="single" data-slide="2" class="nav-link">Single Motor</span></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section-electric">
+        <div class="column">
+            <p class="section-description">Dual Motor Model&nbsp;S is a categorical improvement on conventional all-wheel drive systems. With two motors, one in the front and one in the rear, Model&nbsp;S digitally and independently controls torque to the front and rear wheels. The result is unparalleled traction control in all conditions.</p>
+            <p class="section-description">Conventional all-wheel drive cars employ complex mechanical linkages to distribute power from a single engine to all four wheels. This sacrifices efficiency in favor of all weather traction. In contrast, each Model&nbsp;S motor is lighter, smaller and more efficient than its rear wheel drive counterpart, providing both improved range and faster acceleration.</p>
+                            <p class="section-description">Model&nbsp;S Performance comes standard with All-Wheel Drive Dual Motor, pairing the high performance rear motor with a high efficiency front motor to achieve supercar acceleration, from zero to 100 km/h in 2.7 seconds.</p>
+                    </div>
+        <aside class="column section-media">
+            <figure class="content-media">
+                <iframe src="https://player.vimeo.com/video/157661320?color=ff0000&amp;title=0&amp;byline=0&amp;portrait=0" height="100%" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <figcaption class="media-caption">
+                    <p><strong>Winter Challenge on snow and ice</strong>A professional winter driving class, carried out by the Swiss Touring Club.</p>
+                </figcaption>
+            </figure>
+        </aside>
+    </div>
+</section>
+
+<section id="interior" class="section-container section-interior">
+    <div class="section-alternate">
+        <div class="container">
+            <h1 class="section-title section-title--hed">Built around the driver</h1>
+            <p class="section-description section-description--dek">Model&nbsp;S is a driver's car. The cabin combines meticulous noise engineering with Tesla's uniquely quiet powertrain to obtain the sound dynamics of a recording studio. The gem of the interior is the 17 inch touchscreen, which is angled toward the driver and includes both day and night modes for better visibility without distraction. It puts rich content at your fingertips and provides mobile connectivity so you can easily find your destination, favorite song or a new restaurant.</p>
+        </div>
+    </div>
+    <picture class="slide-image">
+        <img sizes="(max-width: 1430px) 100vw, 1430px"
+             srcset="
+                 /tesla_theme/assets/img/models/model-s-interior--300w.jpg?20170115 300w,
+                 /tesla_theme/assets/img/models/model-s-interior--633w.jpg?20170115 633w,
+                 /tesla_theme/assets/img/models/model-s-interior--870w.jpg?20170115 870w,
+                 /tesla_theme/assets/img/models/model-s-interior--1079w.jpg?20170115 1079w,
+                 /tesla_theme/assets/img/models/model-s-interior--1297w.jpg?20170115 1297w,
+                 /tesla_theme/assets/img/models/model-s-interior--1430w.jpg?20170115 1430w"
+             src="/tesla_theme/assets/img/models/model-s-interior--1430w.jpg?20170115"
+             alt="Model S Interior Comfort">
+    </picture>
+</section>
+
+<section id="safety" class="section-container section-safety">
+    <div class="container">
+        <h1 class="section-title section-title--hed">Safety</h1>
+        <div class="column">
+            <p class="section-description">Model&nbsp;S is designed from the ground up to be the safest car on the road. Much of its safety is owed to the unique electric drivetrain that sits beneath the car's aluminum occupant cell in its own subframe. This unique positioning lowers the car's center of gravity, which improves handling and minimizes rollover risk, and replaces the heavy engine block with impact absorbing boron steel rails.</p>
+            <p class="section-description">Side impacts are met by aluminum pillars reinforced with steel rails to reduce intrusion, protecting occupants and the battery pack while improving roof stiffness. In the event of an accident,
+                            six airbags
+                            protect front and rear occupants, and the high voltage power source is automatically disconnected.</p>
+        </div>
+        <aside class="column section-media">
+            <figure class="content-media">
+                                    <iframe src="https://player.vimeo.com/video/155718470?color=ff0000&amp;title=0&amp;byline=0&amp;portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                <figcaption class="media-caption">
+                    <p>
+                        <strong>What it means to be safe</strong>
+                        Jim survives a life changing collision thanks to his Model&nbsp;S.
+                    </p>
+                </figcaption>
+            </figure>
+        </aside>
+    </div>
+</section>
+
+<section id="interior-features" class="section-container section-interior--features">
+    <div class="container">
+        <div class="column">
+            <h2 class="section-title section-title--hed">The touchscreen</h2>
+            <p class="section-description section-description--dek">The Model&nbsp;S 17 inch touchscreen controls most of the car's functions. Opening the all glass panoramic roof, customizing the automatic climate control, and changing the radio station all happen with a swipe or a touch. The touchscreen, digital instrument cluster, and steering wheel controls seamlessly integrate media, navigation, communications, cabin controls and vehicle data.</p>
+            <aside class="section-media">
+                <figure class="content-media">
+                                            <iframe src="https://player.vimeo.com/video/155718467?color=ff0000&amp;title=0&amp;byline=0&amp;portrait=0" height="100%" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        <figcaption class="media-caption">
+                        <p>
+                            <strong>A more useful driving experience</strong>
+                            Cutting edge technology enhances Simon's driving experience.
+                        </p>
+                    </figcaption>
+                </figure>
+            </aside>
+        </div>
+        <div class="column">
+            <ul class="interior-features-list">
+                <li class="interior-feature">
+                    <strong class="feature-title">Media</strong>
+                                            <span class="feature-description">AM/FM radio, online radio, on-demand Internet radio, Bluetooth®, and USB audio devices</span>
+                                    </li>
+                <li class="interior-feature">
+                    <strong class="feature-title">Controls</strong>
+                    <span class="feature-description">Driving personalization, climate controls, and cabin controls</span>
+                </li>
+                <li class="interior-feature">
+                    <strong class="feature-title">Camera</strong>
+                    <span class="feature-description">High definition backup camera, optimized for visibility and safety</span>
+                </li>
+                <li class="interior-feature">
+                    <strong class="feature-title">Calendar</strong>
+                    <span class="feature-description">Calendar synchronization for daily schedule and tap to navigate</span>
+                </li>
+                <li class="interior-feature">
+                    <strong class="feature-title">Map</strong>
+                    <span class="feature-description">Simple, intuitive Google Maps™ with real time traffic information</span>
+                </li>
+                <li class="interior-feature">
+                    <strong class="feature-title">Navigation</strong>
+                    <span class="feature-description">Smart routing that adjusts for real time traffic conditions</span>
+                </li>
+                <li class="interior-feature">
+                    <strong class="feature-title">Energy</strong>
+                    <span class="feature-description">Real time energy consumption and range estimation</span>
+                </li>
+                <li class="interior-feature">
+                    <strong class="feature-title">Phone</strong>
+                    <span class="feature-description">Bluetooth-enabled, voice controlled handsfree phone system</span>
+                </li>
+            </ul>
+            <p>Model&nbsp;S periodically receives over the air software updates that add new features and refresh the touchscreen look and feel.</p>
+        </div>
+    </div>
+</section>
+
+
+  <section id="software-announcement" class="section-container banner-software">
+    <div class="section-container" style="z-index:1;">
+      <h1 class="section-title">Introducing&nbsp;8.0</h1>
+      <p class="section-description">Software update 8.0 is the most significant over-the-air redesign of the Tesla touchscreen since the launch of Model&nbsp;S in 2012. Combining a modern look with functional updates to the Media Player, Autopilot, Maps and Trip Planner for a safer, more advanced driving experience.</p>
+      <div class="btn-group">
+        <a href="/en_HK/software" title="Learn more about 8.0 Software" class="btn btn-large btn-transparent">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+
+
+<section id="range-calculator" class="section-container section-range-calculator hide-on-mobile" data-gtm-event="widget-interaction" data-gtm-widget="Range Estimator" data-gtm-type="click">
+    <div class="section-content">
+        <h2 class="section-title section-title--hed">Range Per Charge</h2>
+        <script>
+    var Tesla = Tesla || {};
+    Tesla.Smartling = Tesla.Smartling || {};
+    /*<sl:translate>*/
+    Tesla.Smartling._acOn    = "AC On";
+    Tesla.Smartling._acOff   = "AC Off";
+    Tesla.Smartling._heatOn  = "Heat On";
+    Tesla.Smartling._heatOff = "Heat Off";
+    /*</sl:translate>*/
+</script>
+
+<div class="range-hero">
+    <div class="hero-wheels-container">
+        <div class="wheels-front wheels-twentyone wheels-nineteen"></div>
+        <div class="wheels-rear wheels-twentyone wheels-nineteen"></div>
+    </div>
+</div>
+
+<table class="batterytype-ranges">
+    <tbody>
+        <tr>
+            <td class="battery-option">
+                <span class="battery-badge">
+                    <h1 class="battery-badge--60">60</h1>
+                </span>
+                <span class="battery-range-content"> &mdash; </span>
+                <span class="battery-range-units"></span>
+            </td>
+            <td class="battery-option">
+                <span class="battery-badge">
+                    <h1 class="battery-badge--60d">60D</h1>
+                </span>
+                <span class="battery-range-content"> &mdash; </span>
+                <span class="battery-range-units"></span>
+            </td>
+            <td class="battery-option">
+                <span class="battery-badge">
+                    <h1 class="battery-badge--75">75</h1>
+                </span>
+                <span class="battery-range-content"> &mdash; </span>
+                <span class="battery-range-units"></span>
+            </td>
+            <td class="battery-option">
+                <span class="battery-badge">
+                    <h1 class="battery-badge--75d">75D</h1>
+                </span>
+                <span class="battery-range-content"> &mdash; </span>
+                <span class="battery-range-units"></span>
+            </td>
+            <td class="battery-option">
+                <span class="battery-badge">
+                    <h1 class="battery-badge--90d">90D</h1>
+                </span>
+                <span class="battery-range-content"> &mdash; </span>
+                <span class="battery-range-units"></span>
+            </td>
+            <td class="battery-option">
+                <span class="battery-badge">
+                    <h1 class="battery-badge--100d">100D</h1>
+                </span>
+                <span class="battery-range-content"> &mdash; </span>
+                <span class="battery-range-units"></span>
+            </td>
+            <td class="battery-option">
+                <span class="battery-badge">
+                    <h1 class="battery-badge--p100d">P100D</h1>
+                </span>
+                <span class="battery-range-content"> &mdash; </span>
+                <span class="battery-range-units"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="range-controls container">
+    <div class="range-controls--speed">
+        <h2 class="section-subtitle">Speed</h2>
+        <div class="spinner-container">
+            <p class="controls-data">
+                <span class="spinner-number"></span>
+                <span class="spinner-unit"></span>
+            </p>
+            <p class="spinner-controls">
+                <button class="spinner-controls--increase">&plus;</button>
+                <button class="spinner-controls--decrease">&ndash;</button>
+            </p>
+        </div>
+    </div>
+
+    <div class="range-controls--climate">
+        <h2 class="section-subtitle">Outside Temperature</h2>
+        <div class="spinner-container">
+            <p class="controls-data">
+                <span class="spinner-number"></span>
+                <span class="spinner-unit">&deg;</span>
+            </p>
+            <p class="spinner-controls">
+                <button class="spinner-controls--increase">&plus;</button>
+                <button class="spinner-controls--decrease">&ndash;</button>
+            </p>
+        </div>
+        <div class="climate-controller climate-heat climate-ac">
+            <label>
+                <p class="controls-text">AC Off</p>
+                <i class="icon-airconditioning"></i>
+                <input type="radio" class="sr-only controls-data">
+            </label>
+        </div>
+    </div>
+
+    <div class="range-controls--wheels">
+        <h2 class="section-subtitle">Wheels</h2>
+        <div class="controls-wheelsize">
+            <label class="wheelsize-nineteen selected">
+                <input type="radio" class="sr-only controls-data" name="group1" value="19" checked> 19&Prime;
+            </label>
+            <label class="wheelsize-twentyone">
+                <input type="radio" class="sr-only controls-data" name="group1" value="21"> 21&Prime;
+            </label>
+        </div>
+    </div>
+
+    <div class="hidden">
+        <img src="/tesla_theme/assets/img/range-calculator/19-wheel@2x.png">
+        <img src="/tesla_theme/assets/img/range-calculator/19-wheel.png">
+        <img src="/tesla_theme/assets/img/range-calculator/icon-ac-off.svg">
+        <img src="/tesla_theme/assets/img/range-calculator/icon-ac-on.svg">
+        <img src="/tesla_theme/assets/img/range-calculator/icon-heat-on.svg">
+        <img src="/tesla_theme/assets/img/range-calculator/icon-heat-off.svg">
+    </div>
+
+</div>
+    </div>
+</section>
+
+<section id="legal-disclaimer" class="section-disclaimer hide-on-mobile">
+    <div class="container">
+        <p>The actual amount of range that you experience will vary based on your particular use conditions. See how particular use conditions may affect your range in our simulation model.</p>
+        <p>Vehicle range may vary depending on the vehicle configuration, battery age and condition, driving style and operating, environmental and climate conditions.</p>
+    </div>
+</section>
+
+
+<section id="models-specs" class="section-specs hide-on-mobile">
+    <div class="container">
+        <h1 class="section-title section-title--hed">Specs</h1>
+                <div class="specs-horizontal">
+            <div class="panel-display panel-1col clearfix" id="mini-panel-model_s_specification_figure">
+  <div class="panel-panel panel-col">
+    <div><div class="panel-pane pane-custom pane-1"  >
+
+
+
+  <div class="pane-content">
+    <div class="models-specification metric">
+    <figure class="specification-figure">
+        <div class="hide-full-width-caption"></div>
+        <figcaption class="caption width"><span class="label">Width</span> 2187 mm</figcaption>
+        <figcaption class="caption width-mirrors-folded"><span class="label">With mirrors folded</span> 1964 mm</figcaption>
+        <figcaption class="caption clearance"><span class="label">Clearance</span><br/>134 mm</figcaption>
+        <figcaption class="caption suspension"><span class="label">Air suspension</span><br/>116mm - 160mm</figcaption>
+        <figcaption class="caption track"><span class="label">Track</span><br/>Front 1662 mm<br/>Rear 1700 mm</span></figcaption>
+        <figcaption class="caption length"><span class="label">Length</span> 4979 mm</figcaption>
+        <figcaption class="caption wheelbase"><span class="label">Wheelbase</span> 2960 mm</figcaption>
+        <figcaption class="caption chargeport"><span class="label">Charge port</span></figcaption>
+    </figure>
+</div>  </div>
+
+
+  </div>
+</div>
+  </div>
+</div>
+        </div>
+        <div class="specs-vertical">
+            <div class="panel-display panel-1col clearfix" id="mini-panel-model_s_specification_figure">
+  <div class="panel-panel panel-col">
+    <div><div class="panel-pane pane-custom pane-1"  >
+
+
+
+  <div class="pane-content">
+    <div class="models-specification metric">
+    <figure class="specification-figure">
+        <div class="hide-full-width-caption"></div>
+        <figcaption class="caption width"><span class="label">Width</span> 2187 mm</figcaption>
+        <figcaption class="caption width-mirrors-folded"><span class="label">With mirrors folded</span> 1964 mm</figcaption>
+        <figcaption class="caption clearance"><span class="label">Clearance</span><br/>134 mm</figcaption>
+        <figcaption class="caption suspension"><span class="label">Air suspension</span><br/>116mm - 160mm</figcaption>
+        <figcaption class="caption track"><span class="label">Track</span><br/>Front 1662 mm<br/>Rear 1700 mm</span></figcaption>
+        <figcaption class="caption length"><span class="label">Length</span> 4979 mm</figcaption>
+        <figcaption class="caption wheelbase"><span class="label">Wheelbase</span> 2960 mm</figcaption>
+        <figcaption class="caption chargeport"><span class="label">Charge port</span></figcaption>
+    </figure>
+</div>  </div>
+
+
+  </div>
+</div>
+  </div>
+</div>
+        </div>
+        <div class="column specs-description">
+            <h4 class="section-sub-title">Charging</h4>
+            <ul>
+                                    <li class="spec-detail">Access to Tesla's expanding Supercharger network</li>
+                    <li class="spec-detail">Wall connector</li>
+                                                            </ul>
+            <h4 class="section-sub-title">Interior</h4>
+            <ul>
+                <li class="spec-detail">17" capacitive touchscreen</li>
+                <li class="spec-detail">Onboard maps and navigation with free updates for 7 years</li>
+                <li class="spec-detail">Automatic keyless entry</li>
+                <li class="spec-detail">WiFi and Internet connectivity</li>
+                <li class="spec-detail">Mobile app remote control</li>
+                <li class="spec-detail">Retracting door handles</li>
+                <li class="spec-detail">One touch power windows</li>
+                <li class="spec-detail">High definition backup camera</li>
+                                <li class="spec-detail">Hands free talking with Bluetooth</li>
+                <li class="spec-detail">Voice activated controls</li>
+                                    <li class="spec-detail">AM, FM, and Internet streaming radio</li>
+                                                    <li class="spec-detail">Available Ultra High Fidelity Sound package</li>
+                                                <li class="spec-detail">Electrochromatic mirrors</li>
+                                <li class="spec-detail">Power folding, heated side mirrors with memory</li>
+                <li class="spec-detail">Two USB ports for media and power</li>
+                <li class="spec-detail">12 volt power outlet</li>
+                              <li class="spec-detail">Twelve way power adjustable, heated front seats with memory and driver profile</li>
+                <li class="spec-detail">Available subzero weather package with heated rear seats and wiper blade and windshield washer fluid defrosters</li>
+                                    <li class="spec-detail">Front trunk (no engine!), rear trunk, and 60/40 folding rear seats with 894 liters of storage</li>
+                            </ul>
+        </div>
+        <div class="column specs-description">
+            <h4 class="section-sub-title">Safety</h4>
+            <ul>
+                <li class="spec-detail">Active safety technologies, including collision avoidance and automatic emergency braking, have begun rolling out through over-the-air updates</li>
+                <li class="spec-detail">Daytime running lights</li>
+                <li class="spec-detail">Available Smart Air Suspension for raising and lowering ride height</li>
+                                    <li class="spec-detail">Six airbags: head and pelvis airbags in the front plus two side curtain airbags</li>
+                                <li class="spec-detail">Electronic stability and traction control</li>
+                <li class="spec-detail">Four wheel antilock disc brakes with electronic parking brake</li>
+                                                   <li class="spec-detail">Three second row ISOFIX attachments for child seat installations (accommodates three child seats simultaneously: two with ISOFIX and one with top tether and belt)</li>
+                                            </ul>
+                        <h4 class="section-sub-title">Premium Upgrades adds</h4>
+            <ul>
+                <li class="spec-detail">Fit and finish refinements, including the use of higher quality materials and ambient lighting</li>
+                <li class="spec-detail">HEPA air filtration system</li>
+                <li class="spec-detail">Three-position dynamic LED turning lights</li>
+                <li class="spec-detail">LED fog lights</li>
+                              <li class="spec-detail">Power liftgate</li>
+                              <li class="spec-detail">Lighted door handles</li>
+                <li class="spec-detail">Interior accent lighting</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<script src="script.js"/>
 </body>
 </html>

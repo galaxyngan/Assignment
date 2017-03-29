@@ -95,6 +95,13 @@ body {
     transition: 0.5s;
 }
 
+.main_cotainer{
+  margin: auto;
+  width: 860px
+  padding: 20px
+  border :
+}
+
 .overlay-content {
     position: relative;
     top: 25%;
